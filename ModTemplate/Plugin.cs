@@ -33,7 +33,7 @@ namespace Leah_ModTemplate
         private static string LastRoomName = string.Empty;
         public void Update()
         {
-            if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Industry's Player Logger"))
+            if (!PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Industry's Player Logger"))
                 PhotonNetwork.LocalPlayer.CustomProperties.Add("Industry's Player Logger", true);
 
             if (PhotonNetwork.InRoom)
